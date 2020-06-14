@@ -1,9 +1,18 @@
 import React from 'react';
-import MyInfo from './Components/MyInfo'
+import Main from './Components/Main'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 function App() {
   return (
-    <MyInfo/>
+    <div>
+
+
+    <Header/>
+    <Main/>
+    <Footer/>
+    </div>
+
   );
 }
 
