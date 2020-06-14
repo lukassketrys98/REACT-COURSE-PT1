@@ -1,9 +1,11 @@
 import React from 'react';
-import MyInfo from './Components/MyInfo'
+
 
 function App() {
   return (
-    <MyInfo/>
+    <div>
+      <h1>Hello world</h1>
+    </div>
   );
 }
 
