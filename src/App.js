@@ -1,55 +1,42 @@
 import React from 'react';
-import ContactCard from './components/ContactCard'
+import Joke from './components/Joke'
+import jokesData from './jokesData'
 
 function App() {
+    
+  const jokeComponents =  jokesData.map(joke =>{
+     return (
+     <Joke key = {joke.id} question= {joke.question} punchLine = {joke.punchLine}/>
+     )
+    })
+    console.log(jokeComponents)
   return (
-    <div className="contacts">
-         <ContactCard 
-                contact = {{}}
-                name="Mr. Whiskerson" 
-                imgUrl="http://placekitten.com/300/200" 
-                phone="(212) 555-1234" 
-                email="mr.whiskaz@catnap.meow"
-            />
-            
-            <ContactCard 
-                name="Fluffykins" 
-                imgUrl="http://placekitten.com/400/200" 
-                phone="(212) 555-2345" 
-                email="fluff@me.com"
-            />
-            
-            <ContactCard 
-                name="Destroyer" 
-                imgUrl="http://placekitten.com/400/300" 
-                phone="(212) 555-3456" 
-                email="ofworlds@yahoo.com"
-            />
-            
-            <ContactCard 
-                name="Felix" 
-                imgUrl="http://placekitten.com/200/100" 
-                phone="(212) 555-4567" 
-                email="thecat@hotmail.com"
-            />
+    // <div className="jokes">
+    //   <Joke joke={
+    //     {
+    //       question: "Nock Nock, Whos there?",
+    //       punchLine: "Your mom"
+    //     }
+    //   } />
+    //   <Joke joke={
+    //     {
+    //       question: "Vai vai vai vai vai?",
+    //       punchLine: "Kakie peizazh"
+    //     }
+    //   } />
+    //   <Joke joke={
+    //     {
+        
+    //       punchLine: "xDDDDDDDDDDD"
+    //     }
+    //   } />
+      
+   
+    // </div>
+    <div>
+    {jokeComponents}
 
-            {/* arba taip */}
-            {/* <ContactCard 
-                contact={{name: "Mr. Whiskerson", imgUrl: "http://placekitten.com/300/200", phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"}}
-            />
-            
-            <ContactCard 
-                contact={{name: "Fluffykins", imgUrl: "http://placekitten.com/400/200", phone: "(212) 555-2345", email: "fluff@me.com"}}
-            />
-            
-            <ContactCard
-                contact={{name: "Destroyer", imgUrl: "http://placekitten.com/400/300", phone: "(212) 555-3456", email: "ofworlds@yahoo.com"}}
-            />
-            
-            <ContactCard 
-                contact={{name: "Felix", imgUrl: "http://placekitten.com/200/100", phone: "(212) 555-4567", email: "thecat@hotmail.com"}}
-            /> */}
-        </div>
+    </div>
   );
 }
 
